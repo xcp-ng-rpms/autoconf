@@ -10,7 +10,7 @@
 Summary:    A GNU tool for automatically configuring source code
 Name:       autoconf
 Version:    2.71
-Release: %{?xsrel}%{?dist}
+Release: %{?xsrel}.1%{?dist}
 License:    GPLv2+ and GFDL
 Source0: autoconf-2.71.tar.xz
 Source1: config.site
@@ -28,6 +28,7 @@ BuildArch:  noarch
 # run "make check" by default
 %bcond_without check
 
+BuildRequires:      gcc-c++
 # m4 >= 1.4.6 is required, >= 1.4.14 is recommended:
 BuildRequires:      perl
 Requires:           perl(File::Compare)
@@ -129,6 +130,9 @@ install -p -m 0644 %{SOURCE2} %{buildroot}%{_emacs_sitestartdir}
 
 
 %changelog
+* Thu Mar 12 2026 Philippe Coval <philippe.coval@vates.tech> - 2.71-2.1
+- Add gcc-c++ to BuildRequires for check
+
 * Wed Jan 08 2025 Alex Brett <alex.brett@cloud.com> - 2.71-2
 - CA-404468: Remove dependency on help2man
 
