@@ -10,7 +10,7 @@
 Summary:    A GNU tool for automatically configuring source code
 Name:       autoconf
 Version:    2.71
-Release: %{?xsrel}.1%{?dist}
+Release: %{?xsrel}.1~XCPNG2694.1%{?dist}
 License:    GPLv2+ and GFDL
 Source0: autoconf-2.71.tar.xz
 Source1: config.site
